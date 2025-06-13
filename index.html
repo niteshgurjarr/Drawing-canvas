@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Canvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="headline">
+            <h1>Draw What You Want</h1>
+        </div>
+
+        <div class="canvas">
+            <canvas id="canvas" width="800" height="500">
+
+            </canvas>
+        </div>
+        <div class="settings">
+            <input type="color" id="colorPicker" class="color-picker" value="#3674B5">
+            <input type="range" id="brushSize" class="brush-size" min="1" max="50" value="2">
+        </div>
+        <div class="buttons">
+            <button id="clearBtn">Clear</button>
+            <input type="text" id="fileNameInput" class="filename" placeholder="Enter file name">
+            <button id="downloadBtn">Download</button>
+
+        </div>
+
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

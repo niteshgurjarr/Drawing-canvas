@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFD586;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+    color: #3674B5;
+    font-size: 2.5rem;
+    font-family: "Comforter Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.canvas {
+
+    background-color: #FFE99A;
+    width: 90vw;
+    height: 60vh;
+    max-width: 800px;
+    max-height: 500px;
+    border: 2px solid #3674B5;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+.buttons button {
+    font-family: "Molle", cursive;
+    font-weight: 400;
+    font-style: italic;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: #EBFFD8;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+button:hover {
+    background-color: #75ded0;
+}
+
+.filename {
+    padding: 8px 12px;
+    border: 2px solid #3674B5;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: "Molle", cursive;
+    font-style: italic;
+    margin-left: 20px;
+    background-color: #FFF7E1;
+    color: #000000;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.filename:focus {
+    border-color: #00FFDE;
+}
+
+.color-picker {
+
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.color-picker:hover {
+    transform: scale(1.1);
+}
+
+.brush-size {
+    width: 150px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.settings,
+.buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+@media (max-width: 500px) {
+
+    .buttons,
+    .settings {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filename,
+    .buttons button,
+    .color-picker,
+    .brush-size {
+        width: 90%;
+    }
+}
