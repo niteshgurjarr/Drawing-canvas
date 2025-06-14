@@ -1,7 +1,12 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext("2d");
-canvas.width = canvas.offsetWidth;
-canvas.height = canvas.offsetHeight;
+
+function resizeCanvas() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas(); 
 
 let isDrawing = false;
 
@@ -61,4 +66,13 @@ function downloadImage() {
 downloadBtn.addEventListener('click', downloadImage);
 
 const fileNameInput = document.getElementById('fileNameInput');
+
+// Prevent touch gestures like scrolling or zooming on the canvas
+// This is important for a smooth drawing experience on mobile devices
+
+// When the user touches the canvas (starts drawing), prevent default behaviors
+canvas.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
+
+// When the user moves their finger on the canvas, prevent the screen from scrolling
+canvas.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
 
