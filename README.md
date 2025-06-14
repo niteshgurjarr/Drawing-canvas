@@ -36,7 +36,7 @@ A clean, responsive browser-based drawing app built with **HTML**, **CSS**, and 
 
 ## 📂 Project Structure
 ```bash
-canvas-Drawing-App/
+Drawing-canvas/
 │
 ├── index.html       # Main HTML file
 ├── styles.css       # App styling
