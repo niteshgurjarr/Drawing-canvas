@@ -1,10 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #FFD586;
+    overflow-x: hidden;
 }
 
 #container {
@@ -24,19 +26,22 @@ body {
     font-style: normal;
 
 }
-
 .canvas {
-
-    background-color: #FFE99A;
     width: 90vw;
-    height: 60vh;
     max-width: 800px;
-    max-height: 500px;
+    aspect-ratio: 16 / 10;
+    background-color: #FFE99A;
     border: 2px solid #3674B5;
     border-radius: 10px;
     margin-bottom: 5px;
+    position: relative;
 }
 
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 
 .settings {
     display: flex;
